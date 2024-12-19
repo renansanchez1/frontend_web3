@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Cabeçalho */
+header{
+    height: 100px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.header nav ul li {
+    margin-left: 20px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    height: 30vh;
+    background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-container {
+    text-align: center;
+}
+
+.search-input {
+    padding: 15px;
+    width: 600px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    margin-right: 10px;
+}
+
+.search-btn {
+    padding: 15px 25px;
+    background-color: #007C4E;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #00663D;
+}
+
+/* Categorias */
+.categories {
+    padding: 60px 20px 20px;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category-item {
+    text-decoration: none;
+    width: 250px;
+}
+
+.category-box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-box h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.category-item:hover .category-box {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 1200px) {
+    .header .logo {
+        font-size: 22px;
+    }
+
+    .header nav ul li {
+        margin-left: 15px;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+    .search-input {
+        width: 500px;
+    }
+
+    .categories h2 {
+        font-size: 24px;
+    }
+
+    .category-item {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .categories h2 {
+        font-size: 22px;
+    }
+
+    .category-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo {
+        font-size: 18px;
+    }
+
+    .header nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .search-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .categories h2 {
+        font-size: 20px;
+    }
+
+    .category-item {
+        width: 100%;
+    }
+}
